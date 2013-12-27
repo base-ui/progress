@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../build/build.css">
+  </head>
+  <body>
+    <div style="width: 500px;" class="container">
+      <div class="ui progress">
+        <div class="progression"></div>
+      </div>
+    </div>
+    <script src="../build/build.js"></script>
+    <script>
+      var Progress = require('progress');
+      var progress = new Progress(document.querySelector('.ui.progress'));
+      var percentage = 0;
+      
+      function move() {
+        percentage++;
+        progress.setPercentage(percentage);
+        
+        if (progress.percentage < 100) {
+          setTimeout(move, 1000 / 60);
+        }
+      }
+      
+      move();
+    </script>
+  </body>
+</html>
