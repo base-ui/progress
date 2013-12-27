@@ -1,0 +1,22 @@
+{
+  "name": "progress",
+  "repo": "base-ui/progress",
+  "description": "Base progress bar",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "*",
+    "shallker-wang/eventy": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "styles": [
+    "css/progress.css"
+  ],
+  "scripts": [
+    "index.js",
+    "lib/progress.js",
+    "lib/progression.js"
+  ]
+}

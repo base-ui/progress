@@ -1,0 +1,10 @@
+.ui.progress {
+  position: relative;
+  height: 20px;
+  width: 100%;
+}
+.ui.progress >.progression {
+  position: absolute;
+  height: 100%;
+  background-color: #aaa;
+}

@@ -1,0 +1,23 @@
+extends layout/default
+
+append content
+  .container(style="width: 500px;")
+    .ui.progress
+      .progression
+
+append scripts
+  script
+    var Progress = require('progress');
+    var progress = new Progress(document.querySelector('.ui.progress'));
+    var percentage = 0;
+
+    function move() {
+      percentage++;
+      progress.setPercentage(percentage);
+
+      if (progress.percentage < 100) {
+        setTimeout(move, 1000 / 60);
+      }
+    }
+
+    move();
